@@ -1773,6 +1773,16 @@
       }
     }
   }
+  .hover\:scale-97 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 97%;
+        --tw-scale-y: 97%;
+        --tw-scale-z: 97%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:-scale-\[1\.02\] {
     &:hover {
       @media (hover: hover) {
