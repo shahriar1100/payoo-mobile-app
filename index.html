@@ -12,26 +12,26 @@
     <link rel="stylesheet" href="src/output.css" />
   </head>
   <body
-    class="h-[100vh] font-outfit flex justify-center items-center bg-[#dadce2] text-black"
+    class="min-h-screen bg-gradient-to-br from-blue-200 via-blue-400 to-blue-700 flex items-center justify-center animate-gradient"
   >
-    <form class="border-2 shadow-md shadow-amber-600 border-amber-400 rounded-2xl p-5 bg-white w-100">
+    <form class="border border-white/30 shadow-xl shadow-blue-900/30 backdrop-blur-md rounded-2xl p-6 bg-white/80 w-[350px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
       <div class="loginForm space-y-5">
-        <label for="#" class="font-medium text-[16px]">Mobile Number</label
+        <label for="#" class="font-semibold text-gray-700 text-[15px] tracking-wide">Mobile Number</label
         ><br />
         <input
           type="text"
           placeholder="Enter your number"
-          class="placeholder:text-[16px] h-13 input w-full focus:border-black rounded-2xl mt-5 bg-[#dadce2]"
+          class="placeholder:text-gray-400 h-12 text-gray-700 w-full px-4 rounded-xl mt-3 bg-gray-100 border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all duration-300"
         /><br />
 
-        <label for="#" class="font-medium text-[16px]">4 Digit Pin</label><br />
+        <label for="#" class="font-semibold text-gray-700 text-[15px] tracking-wide">4 Digit Pin</label><br />
         <input
           type="text"
           placeholder="Enter 4 Digit Pin"
-          class="placeholder:text-[16px] h-13 input w-full focus:border-black rounded-2xl mt-5 bg-[#dadce2]"
+          class="placeholder:text-gray-400 text-gray-700 h-12 w-full px-4 rounded-xl mt-3 bg-gray-100 border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all duration-300"
         />
         <button
-          class="font-semibold text-white text-xl rounded-3xl w-full bg-[#0874F2] py-[10px]"
+          class="font-semibold text-white text-lg rounded-2xl w-full bg-gradient-to-r from-blue-500 to-blue-700 py-[10px] mt-3 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-[1.03] active:scale-95 shadow-md shadow-blue-500/30"
         >
           Login
         </button>
