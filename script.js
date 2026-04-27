@@ -10,7 +10,6 @@ document.getElementById("loginBtn").addEventListener("click", function (e) {
     const pinNumberConvert = parseInt(pinNumber)
 
     if(mobileNumberConvert  === mobileNum && pinNumberConvert === pinNum){
-        alert("login done")
         window.location.href = "./home.html"
     }else{
         alert("incorrect your number or pin")
