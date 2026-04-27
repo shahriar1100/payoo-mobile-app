@@ -1,14 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo Mobile App</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
-<body class="">
+    <!-- google font  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- google font  -->
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body
+    class="h-[100vh] font-outfit flex justify-center items-center bg-[#dadce2] text-black"
+  >
+    <form class="border-2 shadow-md shadow-amber-600 border-amber-400 rounded-2xl p-5 bg-white w-100">
+      <div class="loginForm space-y-5">
+        <label for="#" class="font-medium text-[16px]">Mobile Number</label
+        ><br />
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="placeholder:text-[16px] h-13 input w-full focus:border-black rounded-2xl mt-5 bg-[#dadce2]"
+        /><br />
 
-<h1 class="bg-red-600 ">hello</h1>
-
-</body>
+        <label for="#" class="font-medium text-[16px]">4 Digit Pin</label><br />
+        <input
+          type="text"
+          placeholder="Enter 4 Digit Pin"
+          class="placeholder:text-[16px] h-13 input w-full focus:border-black rounded-2xl mt-5 bg-[#dadce2]"
+        />
+        <button
+          class="font-semibold text-white text-xl rounded-3xl w-full bg-[#0874F2] py-[10px]"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </body>
 </html>
