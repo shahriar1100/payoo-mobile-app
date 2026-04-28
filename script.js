@@ -1,7 +1,7 @@
 document.getElementById("loginBtn").addEventListener("click", function (e) {
     e.preventDefault()
     const mobileNum = 1626227321;
-    const pinNum = 14106;
+    const pinNum = 1234;
 
     const mobileNumber = document.getElementById("mobileNumber").value
     const mobileNumberConvert = parseInt(mobileNumber)
