@@ -29,7 +29,9 @@
             alt="assets/Group.png"
           />
           <div class="headingLeftText">
-            <h3 class="text-[#080808] font-extrabold text-lg">$<span id="availableBlnc">45000</span></h3>
+            <h3 class="text-[#080808] font-extrabold text-lg">
+              $<span id="availableBlnc">45000</span>
+            </h3>
             <p class="text-[#08080870] font-normal text-sm">
               Available Balance
             </p>
@@ -61,6 +63,7 @@
         <!-- money feture section -->
         <div class="mt-6 grid grid-cols-3 gap-4">
           <div
+            id="addMoneyBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -73,6 +76,7 @@
             </h3>
           </div>
           <div
+            id="cashOutBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -85,6 +89,7 @@
             </h3>
           </div>
           <div
+            id="transferMoneyBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -97,6 +102,7 @@
             </h3>
           </div>
           <div
+            id="getBonusBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -109,6 +115,7 @@
             </h3>
           </div>
           <div
+            id="payBillBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -121,6 +128,7 @@
             </h3>
           </div>
           <div
+            id="transactionsBox"
             class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
@@ -138,82 +146,144 @@
       <!-- payoo main feature section -->
 
       <!-- add money section form -->
-      <div
-        class="bg-[#f4f5f7] pt-8"
-      >
-      <h1 class="text-xl font-semibold text-gray-800 mb-4 pl-6">Add Money</h1>
-        <div
-          class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
-        >
+      <section id="addMoneyForm" class="hidden">
+        <div class="bg-[#f4f5f7] pt-8">
+          <h1 class="text-xl font-semibold text-gray-800 mb-4 pl-6">
+            Add Money
+          </h1>
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+            <form class="space-y-2">
+              <!-- Select Bank -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Select A Bank</label
+                >
+                <select
+                  id="bank"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option disabled selected>Select bank</option>
+                  <option>DBBL (Dutch Bangla Bank)</option>
+                  <option>BRAC Bank</option>
+                  <option>Islami Bank</option>
+                  <option>City Bank</option>
+                  <option>Eastern Bank</option>
+                </select>
+              </div>
 
-          <form class="space-y-2">
-            <!-- Select Bank -->
-            <div>
-              <label class="text-sm text-gray-600 font-medium"
-                >Select A Bank</label
-              >
-              <select
-                id="bank"
-                class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option disabled selected>Select bank</option>
-                <option>DBBL (Dutch Bangla Bank)</option>
-                <option>BRAC Bank</option>
-                <option>Islami Bank</option>
-                <option>City Bank</option>
-                <option>Eastern Bank</option>
-              </select>
-            </div>
+              <!-- Account Number -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Bank Account Number</label
+                >
+                <input
+                  id="accountNumber"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-            <!-- Account Number -->
-            <div>
-              <label class="text-sm text-gray-600 font-medium"
-                >Bank Account Number</label
-              >
-              <input
-                id="accountNumber"
-                type="text"
-                placeholder="Enter 11 digit account number"
-                class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+              <!-- Pin -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Pin Number</label
+                >
+                <input
+                  id="pinInput"
+                  type="password"
+                  placeholder="Enter 4 digit pin number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <!-- Amount -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Amount to Add</label
+                >
+                <input
+                  id="addAmount"
+                  type="text"
+                  placeholder="Add Amount"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-            <!-- Pin -->
-            <div>
-              <label class="text-sm text-gray-600 font-medium"
-                >Pin Number</label
+              <!-- Button -->
+              <button
+                id="addMoneyBtn"
+                class="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-xl mt-2 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-[1.02] active:scale-95 shadow-md"
               >
-              <input
-                id="pinInput"
-                type="password"
-                placeholder="Enter 4 digit pin number"
-                class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-             <!-- Amount -->
-            <div>
-              <label class="text-sm text-gray-600 font-medium"
-                >Amount to Add</label
-              >
-              <input
-                id="addAmount"
-                type="text"
-                placeholder="Add Amount"
-                class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-
-            <!-- Button -->
-            <button
-              id="addMoneyBtn" class="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-xl mt-2 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-[1.02] active:scale-95 shadow-md"
-            >
-              Add Money
-            </button>
-          </form>
+                Add Money
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
       <!-- add money section form -->
+
+      <!-- cash out -->
+      <section id="cashOutForm">
+        <div class="bg-[#f4f5f7] pt-8">
+          <!-- Title -->
+          <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
+            Cash Out
+          </h1>
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+            <form class="space-y-4">
+              <!-- Agent Number -->
+              <div>
+                <label id="acashOutAgentNum" class="text-sm text-gray-600 font-medium"
+                  >Agent Number</label
+                >
+                <input
+                  id="cashOutAgentNum"
+                  type="text"
+                  placeholder="Enter 11 digit number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Pin -->
+              <div>
+                <label  class="text-sm text-gray-600 font-medium"
+                  >Pin Number</label
+                >
+                <input
+                  id="cashOutPinNum"
+                  type="password"
+                  placeholder="Enter 4 digit pin number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Amount -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium">Amount</label>
+                <input
+                  id="cashOutAddAmount"
+                  type="text"
+                  placeholder="Enter amount to withdraw"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Button -->
+              <button
+                id="cashOutBtn"
+                class="w-full rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-full mt-3 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-95 active:scale-90 shadow-md"
+              >
+                Withdraw Money
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- cash out -->
     </div>
 
     <script src="home.js"></script>
