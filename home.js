@@ -109,31 +109,6 @@ cashOutBtn.addEventListener("click", function (e) {
 // toggoling
 
 
-// // main toggoling button
-// const addMoneyBox = document.getElementById("addMoneyBox")
-// const cashOutBox = document.getElementById("cashOutBox")
-// const transferMoneyBox = document.getElementById("transferMoneyBox")
-// const getBonusBox = document.getElementById("getBonusBox")
-// const payBillBox = document.getElementById("payBillBox")
-// const transactionsBox = document.getElementById("transactionsBox")
-
-// // form
-// const addMoneyForm = document.getElementById("addMoneyForm")
-// const cashOutForm = document.getElementById("cashOutForm")
-
-// addMoneyBox.addEventListener("click", function () {
-//     cashOutForm.classList.add("hidden")
-//     addMoneyForm.classList.remove("hidden")
-
-
-// })
-// cashOutBox.addEventListener("click", function () {
-//     addMoneyForm.classList.add("hidden")
-//     cashOutForm.classList.remove("hidden")
-
-// })
-
-
 
 document.getElementById("addMoneyBox").addEventListener("click", function () {
     formShow("addMoneyForm")
