@@ -116,3 +116,23 @@ cashOutBtn.addEventListener("click", function (e) {
     document.getElementById("cashOutPinNum").value = ""
     document.getElementById("cashOutAddAmount").value = ""
 })
+
+// add ement listener for money handle box section
+document.getElementById("addMoneyBox").addEventListener("click",function(){
+
+})
+document.getElementById("cashOutBox").addEventListener("click",function(){
+
+})
+document.getElementById("transferMoneyBox").addEventListener("click",function(){
+
+})
+document.getElementById("getBonusBox").addEventListener("click",function(){
+
+})
+document.getElementById("payBillBox").addEventListener("click",function(){
+
+})
+document.getElementById("transactionsBox").addEventListener("click",function(){
+
+})

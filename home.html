@@ -237,7 +237,8 @@
             <form class="space-y-4">
               <!-- Agent Number -->
               <div>
-                <label id="acashOutAgentNum" class="text-sm text-gray-600 font-medium"
+                <label
+                  class="text-sm text-gray-600 font-medium"
                   >Agent Number</label
                 >
                 <input
@@ -250,7 +251,7 @@
 
               <!-- Pin -->
               <div>
-                <label  class="text-sm text-gray-600 font-medium"
+                <label class="text-sm text-gray-600 font-medium"
                   >Pin Number</label
                 >
                 <input
@@ -284,6 +285,204 @@
         </div>
       </section>
       <!-- cash out -->
+      <!-- transfer money -->
+      <section id="transferMoney">
+        <div class="bg-[#f4f5f7] pt-8">
+          <!-- Title -->
+          <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
+            Transfer Money
+          </h1>
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+            <form class="space-y-4">
+              <!-- User Account Number -->
+              <div>
+                <label
+                  class="text-sm text-gray-600 font-medium"
+                  >User Account Number</label
+                >
+                <input
+                  id="transferOutAgentNum"
+                  type="text"
+                  placeholder="Enter 11 digit number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Amount -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium">Amount</label>
+                <input
+                  id="transferAddAmount"
+                  type="text"
+                  placeholder="Enter amount to Transfer"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Pin -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Pin Number</label
+                >
+                <input
+                  id="transferPinNum"
+                  type="password"
+                  placeholder="Enter 4 digit pin number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Button -->
+              <button
+                id="transferBtn"
+                class="w-full rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-full mt-3 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-95 active:scale-90 shadow-md"
+              >
+                Withdraw Money
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- transfer money -->
+
+      <!-- get bonus -->
+       <section id="getBonus">
+        <div class="bg-[#f4f5f7] pt-8">
+          <!-- Title -->
+          <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
+            Get Bonus
+          </h1>
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+            <form class="space-y-4">
+              <!-- cupon -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Enter Bonus Coupon</label
+                >
+                <input
+                  id="getBonusInput"
+                  type="text"
+                  placeholder="Enter Bonus Coupon"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Button -->
+              <button
+                id="getBonusBtn"
+                class="w-full rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-full mt-3 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-95 active:scale-90 shadow-md"
+              >
+                Get Bonus
+              </button>
+            </form>
+          </div>
+        </div>
+       </section>
+      <!-- get bonus -->
+
+       <!-- pay bill -->
+        <section id="payBill">
+          <div class="bg-[#f4f5f7] pt-8">
+          <h1 class="text-xl font-semibold text-gray-800 mb-4 pl-6">
+            Pay Bill
+          </h1>
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+            <form class="space-y-2">
+              <!-- Select To Pay -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Select To Pay</label
+                >
+                <select
+                  id="payBillBank"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option disabled selected>Select back</option>
+                  <option>DBBL (Dutch Bangla Bank)</option>
+                  <option>BRAC Bank</option>
+                  <option>Islami Bank</option>
+                  <option>City Bank</option>
+                  <option>Eastern Bank</option>
+                </select>
+              </div>
+
+              <!-- Biller Account Number -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Enter account number</label
+                >
+                <input
+                  id="accountNumberPayBill"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Amount to Pay -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Amount to Pay</label
+                >
+                <input
+                  id="addAmountPayBill"
+                  type="text"
+                  placeholder="Add Amount to pay"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Pin -->
+              <div>
+                <label class="text-sm text-gray-600 font-medium"
+                  >Pin Number</label
+                >
+                <input
+                  id="pinInputPayBill"
+                  type="password"
+                  placeholder="Enter 4 digit pin number"
+                  class="w-full mt-2 h-11 px-4 rounded-xl bg-gray-100 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <!-- Button -->
+              <button
+                id="payBillMoneyBtn"
+                class="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2.5 rounded-xl mt-2 transition-all duration-300 hover:from-blue-600 hover:to-blue-800 hover:scale-[1.02] active:scale-95 shadow-md"
+              >
+                Add Money
+              </button>
+            </form>
+          </div>
+        </div>
+        </section>
+       <!-- pay bill -->
+
+       <!-- transiction -->
+        <div class="bg-[#f4f5f7] pt-8">
+          <div class="flex justify-between items-center px-6">
+            <h1 class="text-xl font-semibold text-gray-800 mb-4">
+            Transactions
+          </h1>
+          <p class="text-gray-400 text-sm">View All</p>
+          </div>
+          <!-- transiction history -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto"
+          >
+          </div>
+        </div>
+       <!-- transiction -->
+
+
+
+
     </div>
 
     <script src="home.js"></script>
