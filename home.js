@@ -2,31 +2,55 @@
 const addMoneyBtn = document.getElementById("addMoneyBtn")
 const validPin = 1234
 
+// reuseable function 
+// get input value in number 
+function getInputValueNumber(id) {
+    const inputField = document.getElementById(id)
+    const inputFieldValue = inputField.value
+    const inputFieldValueNum = parseInt(inputFieldValue)
+    return inputFieldValueNum
+}
+// get only input feild value
+function getInputValue(id) {
+    const inputValue = document.getElementById(id)
+    const inputFieldValue = inputValue.value
+    return inputFieldValue
+}
+// set innter text function
+function setInnerText(value) {
+    const availableBlncElement = document.getElementById("availableBlnc")
+    availableBlncElement.innerHTML = value
+}
+
+
+
+
 addMoneyBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
-    const bank = document.getElementById("bank").value
-    const accountNumber = document.getElementById("accountNumber").value
+    const bank = getInputValue("bank")
+    const accountNumber = getInputValueNumber("accountNumber")
     if (accountNumber.length < 11) {
         alert("please enter your valid number")
         return
     }
-    const pinInput = parseInt(document.getElementById("pinInput").value)
+    const pinInput = getInputValueNumber("pinInput")
+    getInputValueNumber("pinInput")
     if (pinInput !== validPin) {
         alert("please enter your valid pin number!")
         return
     }
 
-    const addAmount = parseInt(document.getElementById("addAmount").value)
+    const addAmount = getInputValueNumber("addAmount")
+    getInputValueNumber("addAmount")
     if (isNaN(addAmount) || addAmount <= 0) {
         alert("please enter your amount")
         return
     }
 
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
-
     const totalAvailableBalence = availableBlnc + addAmount
-    document.getElementById("availableBlnc").innerText = totalAvailableBalence
+    setInnerText(totalAvailableBalence)
 
     document.getElementById("accountNumber").value = ""
     document.getElementById("addAmount").value = ""
@@ -69,21 +93,24 @@ cashOutBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
 
-    const cashOutAgentNum = document.getElementById("cashOutAgentNum").value
+    const cashOutAgentNum = getInputValueNumber("cashOutAgentNum")
     if (cashOutAgentNum.length < 11) {
         alert("please enter valid agent number")
         return
     }
-    const cashOutPinNum = parseInt(document.getElementById("cashOutPinNum").value)
+    const cashOutPinNum = getInputValueNumber("cashOutPinNum")
+    getInputValueNumber("cashOutPinNum")
     if (cashOutPinNum !== validPin) {
         alert("please enter your valid pin")
         return
     }
 
-    const cashOutAddAmount = parseInt(document.getElementById("cashOutAddAmount").value)
+    const cashOutAddAmount = getInputValueNumber("cashOutAddAmount")
+    getInputValueNumber("cashOutAddAmount")
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
     const afterCashOut = availableBlnc - cashOutAddAmount
-    document.getElementById("availableBlnc").innerText = afterCashOut
+    // document.getElementById("availableBlnc").innerText = afterCashOut
+    setInnerText(afterCashOut)
 
     document.getElementById("cashOutAgentNum").value = ""
     document.getElementById("cashOutPinNum").value = ""
