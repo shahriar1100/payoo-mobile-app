@@ -16,7 +16,7 @@
     class="min-h-screen relative bg-gradient-to-br from-blue-200 via-blue-400 to-blue-700 flex items-center justify-center animate-gradient"
   >
     <div
-      class="border border-white/30 shadow-xl shadow-blue-900/30 backdrop-blur-md bg-white/80 w-[500px] transition-all duration-300 hover:scale-97 hover:shadow-2xl"
+      class="border absolute -top-5 scale-85 hover:scale-87 border-white/30 shadow-xl shadow-blue-900/30 backdrop-blur-md bg-white/80 w-[500px] transition-all duration-300 hover:shadow-2xl"
     >
       <!-- payoo heading -->
       <div
@@ -64,7 +64,7 @@
         <div class="mt-6 grid grid-cols-3 gap-4">
           <div
             id="addMoneyBox"
-            class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-[#0875f21f] border-[#0808081e] rounded-lg text-center space-y-2 py-5"
+            class="cardFeature bg-[#f4f5f7] border-1 hover:border-1 hover:border-[#0874F2] transition-all duration-300 group hover:bg-hoverBlue border-[#0808081e] rounded-lg text-center space-y-2 py-5"
           >
             <img
               class="mx-auto"
@@ -146,7 +146,7 @@
       <!-- payoo main feature section -->
 
       <!-- add money section form -->
-      <section id="addMoneyForm" class="hidden">
+      <section id="addMoneyForm" class="allForm">
         <div class="bg-[#f4f5f7] pt-8">
           <h1 class="text-xl font-semibold text-gray-800 mb-4 pl-6">
             Add Money
@@ -225,7 +225,7 @@
       <!-- add money section form -->
 
       <!-- cash out -->
-      <section id="cashOutForm">
+      <section id="cashOutForm" class="allForm hidden">
         <div class="bg-[#f4f5f7] pt-8">
           <!-- Title -->
           <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
@@ -286,7 +286,7 @@
       </section>
       <!-- cash out -->
       <!-- transfer money -->
-      <section id="transferMoney">
+      <section id="transferMoney" class="allForm hidden">
         <div class="bg-[#f4f5f7] pt-8">
           <!-- Title -->
           <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
@@ -348,7 +348,7 @@
       <!-- transfer money -->
 
       <!-- get bonus -->
-       <section id="getBonus">
+       <section id="getBonus" class="allForm hidden">
         <div class="bg-[#f4f5f7] pt-8">
           <!-- Title -->
           <h1 class="text-lg font-semibold text-gray-800 mb-4 pl-6">
@@ -385,7 +385,7 @@
       <!-- get bonus -->
 
        <!-- pay bill -->
-        <section id="payBill">
+        <section id="payBill" class="allForm hidden">
           <div class="bg-[#f4f5f7] pt-8">
           <h1 class="text-xl font-semibold text-gray-800 mb-4 pl-6">
             Pay Bill
@@ -465,7 +465,8 @@
        <!-- pay bill -->
 
        <!-- transiction -->
-        <div class="bg-[#f4f5f7] pt-8">
+        <section id="transiction" class="allForm hidden">
+          <div class="bg-[#f4f5f7] pt-8">
           <div class="flex justify-between items-center px-6">
             <h1 class="text-xl font-semibold text-gray-800 mb-4">
             Transactions
@@ -478,6 +479,7 @@
           >
           </div>
         </div>
+        </section>
        <!-- transiction -->
 
 

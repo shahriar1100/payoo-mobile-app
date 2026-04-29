@@ -21,7 +21,22 @@ function setInnerText(value) {
     const availableBlncElement = document.getElementById("availableBlnc")
     availableBlncElement.innerHTML = value
 }
-
+// show form for button match
+function formShow(id) {
+    const allForms = document.getElementsByClassName("allForm")
+    for (const allForm of allForms) {
+        allForm.classList.add("hidden")
+    }
+    document.getElementById(id).classList.remove("hidden")
+}
+// add bg when click money handle box
+function addBg(id){
+    const cardFeatures = document.getElementsByClassName("cardFeature")
+    for(const cardFeature of cardFeatures){
+        cardFeature.classList.remove("bg-hoverBlue")
+    }
+    document.getElementById(id).classList.add("bg-hoverBlue")
+}
 
 
 
@@ -58,33 +73,6 @@ addMoneyBtn.addEventListener("click", function (e) {
 
 })
 
-// toggoling
-
-
-// main toggoling button
-const addMoneyBox = document.getElementById("addMoneyBox")
-const cashOutBox = document.getElementById("cashOutBox")
-const transferMoneyBox = document.getElementById("transferMoneyBox")
-const getBonusBox = document.getElementById("getBonusBox")
-const payBillBox = document.getElementById("payBillBox")
-const transactionsBox = document.getElementById("transactionsBox")
-
-// form
-const addMoneyForm = document.getElementById("addMoneyForm")
-const cashOutForm = document.getElementById("cashOutForm")
-
-addMoneyBox.addEventListener("click", function () {
-    cashOutForm.classList.add("hidden")
-    addMoneyForm.classList.remove("hidden")
-
-
-})
-cashOutBox.addEventListener("click", function () {
-    addMoneyForm.classList.add("hidden")
-    cashOutForm.classList.remove("hidden")
-
-})
-
 
 // cashout form validation
 const cashOutBtn = document.getElementById("cashOutBtn")
@@ -118,21 +106,56 @@ cashOutBtn.addEventListener("click", function (e) {
 })
 
 // add ement listener for money handle box section
-document.getElementById("addMoneyBox").addEventListener("click",function(){
+// toggoling
 
+
+// // main toggoling button
+// const addMoneyBox = document.getElementById("addMoneyBox")
+// const cashOutBox = document.getElementById("cashOutBox")
+// const transferMoneyBox = document.getElementById("transferMoneyBox")
+// const getBonusBox = document.getElementById("getBonusBox")
+// const payBillBox = document.getElementById("payBillBox")
+// const transactionsBox = document.getElementById("transactionsBox")
+
+// // form
+// const addMoneyForm = document.getElementById("addMoneyForm")
+// const cashOutForm = document.getElementById("cashOutForm")
+
+// addMoneyBox.addEventListener("click", function () {
+//     cashOutForm.classList.add("hidden")
+//     addMoneyForm.classList.remove("hidden")
+
+
+// })
+// cashOutBox.addEventListener("click", function () {
+//     addMoneyForm.classList.add("hidden")
+//     cashOutForm.classList.remove("hidden")
+
+// })
+
+
+
+document.getElementById("addMoneyBox").addEventListener("click", function () {
+    formShow("addMoneyForm")
+    addBg("addMoneyBox")
 })
-document.getElementById("cashOutBox").addEventListener("click",function(){
-
+document.getElementById("cashOutBox").addEventListener("click", function () {
+    formShow("cashOutForm")
+    addBg("cashOutBox")
 })
-document.getElementById("transferMoneyBox").addEventListener("click",function(){
-
+document.getElementById("transferMoneyBox").addEventListener("click", function () {
+    formShow("transferMoney")
+    addBg("transferMoneyBox")
 })
-document.getElementById("getBonusBox").addEventListener("click",function(){
-
+document.getElementById("getBonusBox").addEventListener("click", function () {
+    formShow("getBonus")
+    addBg("getBonusBox")
 })
-document.getElementById("payBillBox").addEventListener("click",function(){
-
+document.getElementById("payBillBox").addEventListener("click", function () {
+    formShow("payBill")
+    addBg("payBillBox")
 })
-document.getElementById("transactionsBox").addEventListener("click",function(){
-
+document.getElementById("transactionsBox").addEventListener("click", function () {
+    formShow("transiction")
+    addBg("transactionsBox")
 })
