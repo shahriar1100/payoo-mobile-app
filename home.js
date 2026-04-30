@@ -40,6 +40,35 @@ function addBg(id) {
 
 
 // add ement listener for money handle box section
+
+document.getElementById("transactionsBox").addEventListener("click",function(){
+    const transectionContainer = document.getElementById("transectionContainer")
+    transectionContainer.innerText = ""
+    for(const data of transectionData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-[450px] mx-auto">
+            <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center">
+                <div class="img rounded-full p-3 bg-[#f4f5f7]">
+                  <img src="assets/wallet1.png" alt="assets/wallet1.png">
+                </div>
+                <div class="transictionText ml-2">
+                  <h1 class="text-[#080808be] text-[16px] font-semibold">${data.name}</h1>
+                  <h1 class="text-xs text-[#080808be]">Today ${data.date}</h1>
+                </div>
+              </div>
+              <div class="dotIcon text-[#080808be] text-2xl">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+          </div>
+        `
+        transectionContainer.appendChild(div)
+    }
+})
+
+
 // toggoling
 
 
@@ -175,9 +204,15 @@ transferBtn.addEventListener("click", function (e) {
     const afterTransferMoney = availableBlnc - transferAddAmount
     setInnerText(afterTransferMoney)
 
-    document.getElementById("cashOutAgentNum").value = ""
-    document.getElementById("cashOutPinNum").value = ""
-    document.getElementById("cashOutAddAmount").value = ""
+    document.getElementById("transferAccountNum").value = ""
+    document.getElementById("transferPinNum").value = ""
+    document.getElementById("transferAddAmount").value = ""
+
+    const data = {
+        name : "Transfer Money",
+        date : new Date().toLocaleTimeString()
+    }
+    transectionData.push(data)
 })
 
 // pay bill form
@@ -203,5 +238,11 @@ payBillMoneyBtn.addEventListener('click', function (e) {
     document.getElementById("accountNumberPayBill").value = ""
     document.getElementById("pinInputPayBill").value = ""
     document.getElementById("addAmountPayBill").value = ""
+
+    const data = {
+        name : "Pay Bill",
+        date : new Date().toLocaleTimeString()
+    }
+    transectionData.push(data)
 
 })
