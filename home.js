@@ -1,5 +1,5 @@
 
-const addMoneyBtn = document.getElementById("addMoneyBtn")
+
 const validPin = 1234
 
 // reuseable function 
@@ -73,12 +73,14 @@ document.getElementById("transactionsBox").addEventListener("click", function ()
 
 // Money management with form
 
+// add money form
+const addMoneyBtn = document.getElementById("addMoneyBtn")
 addMoneyBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
     const bank = getInputValue("bank")
     const accountNumber = getInputValueNumber("accountNumber")
-    if (!/^\d+$/.test(transferAccountNum) || accountNumber.length < 11) {
+    if (!/^\d+$/.test(accountNumber) || accountNumber.length < 11) {
         alert("please enter your valid number")
         return
     }
@@ -112,8 +114,8 @@ cashOutBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
 
-    const cashOutAgentNum = getInputValueNumber("cashOutAgentNum")
-    if (!/^\d+$/.test(transferAccountNum) || cashOutAgentNum.length < 11) {
+    const cashOutAgentNum = getInputValue("cashOutAgentNum")
+    if (!/^\d+$/.test(cashOutAgentNum) || cashOutAgentNum.length < 11) {
         alert("please enter valid agent number")
         return
     }
@@ -126,7 +128,6 @@ cashOutBtn.addEventListener("click", function (e) {
     const cashOutAddAmount = getInputValueNumber("cashOutAddAmount")
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
     const afterCashOut = availableBlnc - cashOutAddAmount
-    // document.getElementById("availableBlnc").innerText = afterCashOut
     setInnerText(afterCashOut)
 
     document.getElementById("cashOutAgentNum").value = ""
@@ -141,12 +142,12 @@ const transferBtn = document.getElementById("transferBtn")
 transferBtn.addEventListener("click", function (e) {
     e.preventDefault()
     const transferAccountNum = getInputValue("transferAccountNum")
-    if(!/^\d+$/.test(transferAccountNum) || transferAccountNum.length < 11){
+    if (!/^\d+$/.test(transferAccountNum) || transferAccountNum.length < 11) {
         alert("please enter valid account number")
-        return 
+        return
     }
-    
-     const transferPinNum = getInputValueNumber("transferPinNum")
+
+    const transferPinNum = getInputValueNumber("transferPinNum")
     if (transferPinNum !== validPin) {
         alert("please enter your valid pin")
         return
@@ -157,10 +158,9 @@ transferBtn.addEventListener("click", function (e) {
         alert("please enter your amount")
         return
     }
-    
+
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
     const afterTransferMoney = availableBlnc - transferAddAmount
-    document.getElementById("availableBlnc").innerText = afterTransferMoney
     setInnerText(afterTransferMoney)
 
     document.getElementById("cashOutAgentNum").value = ""
@@ -168,3 +168,33 @@ transferBtn.addEventListener("click", function (e) {
     document.getElementById("cashOutAddAmount").value = ""
 })
 
+// pay bill form
+const payBillMoneyBtn = document.getElementById('payBillMoneyBtn')
+payBillMoneyBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    const payBillBank = getInputValue("payBillBank")
+    const accountNumberPayBill = getInputValue("accountNumberPayBill")
+    if (!/^\d+$/.test(accountNumberPayBill) || accountNumberPayBill.length < 11) {
+        alert("please enter account number")
+        return
+    }
+    const pinInputPayBill = getInputValueNumber("pinInputPayBill")
+    if (pinInputPayBill !== validPin) {
+        alert("please enter your valid pin")
+        return
+    }
+    const addAmountPayBill = getInputValueNumber("addAmountPayBill")
+    const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
+    const afterPayBillAvailableBalence = availableBlnc - addAmountPayBill
+    setInnerText(afterPayBillAvailableBalence)
+
+    document.getElementById("accountNumberPayBill").value = ""
+    document.getElementById("pinInputPayBill").value = ""
+    document.getElementById("addAmountPayBill").value = ""
+
+})
+
+
+// =============== transiction history ==================
+const transictionData = []
+// const date = 
