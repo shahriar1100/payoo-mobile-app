@@ -161,6 +161,10 @@ cashOutBtn.addEventListener("click", function (e) {
 
     const cashOutAddAmount = getInputValueNumber("cashOutAddAmount")
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
+     if (isNaN(cashOutAddAmount) || cashOutAddAmount <= 0 || cashOutAddAmount > availableBlnc) {
+        alert("please enter your amount")
+        return
+    }
     const afterCashOut = availableBlnc - cashOutAddAmount
     setInnerText(afterCashOut)
 
@@ -201,6 +205,10 @@ transferBtn.addEventListener("click", function (e) {
     }
 
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
+    if (isNaN(transferAddAmount) || transferAddAmount <= 0 || transferAddAmount > availableBlnc) {
+        alert("please enter your amount")
+        return
+    }
     const afterTransferMoney = availableBlnc - transferAddAmount
     setInnerText(afterTransferMoney)
 
@@ -232,6 +240,10 @@ payBillMoneyBtn.addEventListener('click', function (e) {
     }
     const addAmountPayBill = getInputValueNumber("addAmountPayBill")
     const availableBlnc = parseInt(document.getElementById("availableBlnc").innerText)
+    if (isNaN(addAmountPayBill) || addAmountPayBill <= 0 || addAmountPayBill > availableBlnc) {
+        alert("please enter your amount")
+        return
+    }
     const afterPayBillAvailableBalence = availableBlnc - addAmountPayBill
     setInnerText(afterPayBillAvailableBalence)
 
