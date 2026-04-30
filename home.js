@@ -1,5 +1,4 @@
-
-
+const transectionData = []
 const validPin = 1234
 
 // reuseable function 
@@ -79,9 +78,9 @@ addMoneyBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
     const bank = getInputValue("bank")
-    const accountNumber = getInputValueNumber("accountNumber")
+    const accountNumber = getInputValue("accountNumber")
     if (!/^\d+$/.test(accountNumber) || accountNumber.length < 11) {
-        alert("please enter your valid number")
+        alert("please enter your valid account number")
         return
     }
     const pinInput = getInputValueNumber("pinInput")
@@ -103,7 +102,13 @@ addMoneyBtn.addEventListener("click", function (e) {
     document.getElementById("accountNumber").value = ""
     document.getElementById("addAmount").value = ""
     document.getElementById("pinInput").value = ""
-
+    
+    const data = {
+        name : "Add Money",
+        date : new Date().toLocaleTimeString()
+    }
+    transectionData.push(data)
+    
 })
 
 
@@ -133,6 +138,13 @@ cashOutBtn.addEventListener("click", function (e) {
     document.getElementById("cashOutAgentNum").value = ""
     document.getElementById("cashOutPinNum").value = ""
     document.getElementById("cashOutAddAmount").value = ""
+
+    const data = {
+        name : "Cash-Out",
+        date : new Date().toLocaleTimeString()
+    }
+    transectionData.push(data)
+    
 })
 
 // transfer money form validation
@@ -193,8 +205,3 @@ payBillMoneyBtn.addEventListener('click', function (e) {
     document.getElementById("addAmountPayBill").value = ""
 
 })
-
-
-// =============== transiction history ==================
-const transictionData = []
-// const date = 
